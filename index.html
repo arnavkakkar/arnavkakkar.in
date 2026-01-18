@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
+    <title>Arnav Kakkar | Portfolio</title>
 </head>
+
 <body>
+
     <header>
-        <a href="#" class="logo">Arnav</a>
+        <a href="#home" class="logo">Arnav</a>
 
         <nav>
-            <a href="#" class="active"> Home</a>
-            <a href="#" >Services</a>
-            <a href="#" >Skills</a>
-            <a href="#" >Education</a>
-            <a href="#" >Experience</a>
-            <a href="#" >Contact</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <section class="home">
+
+    <!-- HOME -->
+    <section class="home" id="home">
         <div class="home-img">
             <img src="profile.jpg" alt="Arnav Kakkar">
         </div>
+
         <div class="home-content">
             <h1>Hi, It's <span>Arnav</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Currently an Electronics & VLSI Engineering student transitioning into Data Science.
+
+            <p>
+                Currently an Electronics & VLSI Engineering student transitioning into Data Science.
                 I work with Python for data-driven problem solving and have hands-on experience with
-                libraries like NumPy, Pandas, Matplotlib, and Seaborn. I also build projects in my
-                core electronics domain, including FPGA-based systems.</p>
+                NumPy, Pandas, Matplotlib, and Seaborn. I also build projects in my core electronics
+                domain, including FPGA-based systems.
+            </p>
+
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/arnav-kakkar-4ba734309/" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
@@ -46,10 +55,65 @@
                     <i class="fa-solid fa-file-lines"></i>
                 </a>
             </div>
-            <a href="#" class="btn">Hire me</a>
+
+            <a href="#contact" class="btn">Hire me</a>
         </div>
     </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+                <h3>People Pages Recommendation System</h3>
+                <p>
+                    Built a Python-based recommendation system to suggest relevant people pages
+                    using structured data analysis and logical filtering techniques.
+                </p>
+                <p class="tech">
+                    <span>Python</span>
+                    <span>Data Analysis</span>
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/arnavkakkar/people-pages-recommendation-python" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Instagram Data Analysis</h3>
+                <p>
+                    Performed exploratory data analysis on Instagram user data to extract insights
+                    related to engagement, followers, and content trends.
+                </p>
+                <p class="tech">
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>Matplotlib</span>
+                    <span>Seaborn</span>
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/arnavkakkar/instagram-data-analysis" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Secured Communication Circuit Using FPGA</h3>
+                <p>
+                    Designed and implemented a secured communication system using FPGA, including
+                    both analog and digital implementations with encryption logic for secure data transfer.
+                </p>
+                <p class="tech">
+                    <span>FPGA</span>
+                    <span>Digital Electronics</span>
+                    <span>Analog Circuits</span>
+                    <span>VLSI</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
 </body>
-
 </html>
-
