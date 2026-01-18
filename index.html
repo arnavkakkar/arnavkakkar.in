@@ -1,119 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnav Kakkar | Portfolio</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Arnav Kakkar | Portfolio</title>
 </head>
-
 <body>
 
-    <header>
-        <a href="#home" class="logo">Arnav</a>
+<header>
+    <a href="#home" class="logo">Arnav</a>
 
-        <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
 
-    <!-- HOME -->
-    <section class="home" id="home">
-        <div class="home-img">
-            <img src="profile.jpg" alt="Arnav Kakkar">
+        <div class="nav-indicator"></div>
+    </nav>
+</header>
+
+<!-- ================= HOME ================= -->
+<section class="home" id="home">
+
+    <!-- PROFILE CARD -->
+    <div class="profile-card">
+        <img src="profile.jpg" alt="Arnav Kakkar">
+        <h4>ARNAV KAKKAR</h4>
+    </div>
+
+    <!-- TEXT -->
+    <div class="home-content">
+        <h1>Hi, It's <span>Arnav</span></h1>
+        <h3 class="typing-text">I'm a <span id="typed-text"></span></h3>
+
+        <p>
+            Currently an Electronics & VLSI Engineering student transitioning into Data Science.
+            I work with Python for data-driven problem solving and have hands-on experience with
+            NumPy, Pandas, Matplotlib, and Seaborn. I also build projects in my core electronics
+            domain, including FPGA-based systems.
+        </p>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/arnav-kakkar-4ba734309/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/arnavkakkar/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:arnavkakkar28.3@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="resume.pdf" target="_blank"><i class="fa-solid fa-file-lines"></i></a>
         </div>
 
-        <div class="home-content">
-            <h1>Hi, It's <span>Arnav</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
 
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <h3>People Pages Recommendation System</h3>
             <p>
-                Currently an Electronics & VLSI Engineering student transitioning into Data Science.
-                I work with Python for data-driven problem solving and have hands-on experience with
-                NumPy, Pandas, Matplotlib, and Seaborn. I also build projects in my core electronics
-                domain, including FPGA-based systems.
+                Python-based recommendation system using similarity metrics and
+                user interaction data to suggest relevant pages.
             </p>
 
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/arnav-kakkar-4ba734309/" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/arnavkakkar/" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="mailto:arnavkakkar28.3@gmail.com">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-                <a href="resume.pdf" target="_blank">
-                    <i class="fa-solid fa-file-lines"></i>
-                </a>
+            <div class="tech">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
             </div>
 
-            <a href="#contact" class="btn">Hire me</a>
+            <div class="project-links">
+                <a href="https://github.com/arnavkakkar/people-pages-recommendation-python" target="_blank">
+                    View on GitHub →
+                </a>
+            </div>
         </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section class="projects" id="projects">
-        <h2 class="section-title">Projects</h2>
+        <div class="project-card">
+            <h3>Instagram Data Analysis</h3>
+            <p>
+                Exploratory data analysis on Instagram datasets to extract
+                engagement patterns and behavioral insights.
+            </p>
 
-        <div class="projects-container">
-
-            <div class="project-card">
-                <h3>People Pages Recommendation System</h3>
-                <p>
-                    Built a Python-based recommendation system to suggest relevant people pages
-                    using structured data analysis and logical filtering techniques.
-                </p>
-                <p class="tech">
-                    <span>Python</span>
-                    <span>Data Analysis</span>
-                </p>
-                <div class="project-links">
-                    <a href="https://github.com/arnavkakkar/people-pages-recommendation-python" target="_blank">GitHub</a>
-                </div>
+            <div class="tech">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
             </div>
 
-            <div class="project-card">
-                <h3>Instagram Data Analysis</h3>
-                <p>
-                    Performed exploratory data analysis on Instagram user data to extract insights
-                    related to engagement, followers, and content trends.
-                </p>
-                <p class="tech">
-                    <span>Python</span>
-                    <span>Pandas</span>
-                    <span>Matplotlib</span>
-                    <span>Seaborn</span>
-                </p>
-                <div class="project-links">
-                    <a href="https://github.com/arnavkakkar/instagram-data-analysis" target="_blank">GitHub</a>
-                </div>
+            <div class="project-links">
+                <a href="https://github.com/arnavkakkar/instagram-data-analysis" target="_blank">
+                    View on GitHub →
+                </a>
             </div>
-
-            <div class="project-card">
-                <h3>Secured Communication Circuit Using FPGA</h3>
-                <p>
-                    Designed and implemented a secured communication system using FPGA, including
-                    both analog and digital implementations with encryption logic for secure data transfer.
-                </p>
-                <p class="tech">
-                    <span>FPGA</span>
-                    <span>Digital Electronics</span>
-                    <span>Analog Circuits</span>
-                    <span>VLSI</span>
-                </p>
-            </div>
-
         </div>
-    </section>
+
+        <div class="project-card">
+            <h3>Secured Communication Circuit (FPGA)</h3>
+            <p>
+                Designed and implemented a secure communication system using both
+                analog and digital techniques on FPGA hardware.
+            </p>
+
+            <div class="tech">
+                <span>FPGA</span>
+                <span>VHDL</span>
+                <span>Digital Design</span>
+                <span>Analog Circuits</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= TYPEWRITER SCRIPT ================= -->
+<script>
+    let roleIndex = 0, charIndex = 0, deleting = false;
+
+    const roles = ["Data Scientist", "VLSI Engineer"];
+    const typedText = document.querySelector(".typing-text span");
+
+    function typeEffect() {
+        const current = roles[roleIndex];
+
+        if (!deleting) {
+            typedText.textContent = current.slice(0, ++charIndex);
+            if (charIndex === current.length) setTimeout(() => deleting = true, 1200);
+        } else {
+            typedText.textContent = current.slice(0, --charIndex);
+            if (charIndex === 0) {
+                deleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+        }
+
+        setTimeout(typeEffect, deleting ? 70 : 110);
+    }
+
+    typeEffect();
+
+    // ======== ADD CURSOR (NON-DESTRUCTIVE) ========
+    const cursor = document.createElement("span");
+    cursor.classList.add("cursor");
+    cursor.textContent = "|";
+    typedText.parentElement.appendChild(cursor);
+
+    // ================= NAV ACTIVE LINK (CLICK + SCROLL) =================
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+function setActiveLink() {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", setActiveLink);
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+    });
+});
+
+</script>
 
 </body>
 </html>
