@@ -408,3 +408,33 @@ span {
 .project-links {
     display: none;
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: black;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+    nav.active {
+        display: flex;
+    }
+    nav a {
+        margin: 1rem 0;
+    }
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
