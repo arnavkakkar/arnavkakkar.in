@@ -255,26 +255,32 @@ span {
 
     .projects-container,
     .tools-container {
-        grid-template-columns: 1fr;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 4rem;
+}
 }
 
-/* ===== FIX LOGO APPEARANCE ONLY (NO LAYOUT CHANGES) ===== */
+/* ===== TOOL ICON STYLING ===== */
 
-.tools-card img,
-.tools img,
-.tech-card img {
-    background: transparent;
-    mix-blend-mode: multiply;
-    filter: contrast(1.1) brightness(1.05);
+.tool-card i {
+    font-size: 5rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: block;
+    text-shadow: 0 0 15px rgba(139,93,255,0.5);
+    transition: all 0.3s ease;
 }
 
-/* Optional hover polish (does NOT affect layout) */
-.tools-card img:hover,
-.tools img:hover,
-.tech-card img:hover {
-    transform: scale(1.08);
-    transition: transform 0.25s ease;
+.tool-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(139,93,255,0.3);
+    transition: 0.3s ease;
+}
+
+.tool-card:hover i {
+    transform: scale(1.15);
+    text-shadow: 0 0 25px rgba(139,93,255,0.8);
 }
 
 /* ================= CONTACT SECTION ================= */
@@ -379,4 +385,26 @@ span {
     .contact-title {
         font-size: 4.2rem;
     }
+}
+
+/* FIX PROJECT TECH TAG SPACING */
+.tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.tech span {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    background: rgba(139,93,255,0.15);
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.project-links {
+    display: none;
 }
