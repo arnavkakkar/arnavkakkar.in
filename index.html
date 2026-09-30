@@ -3,378 +3,1427 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnav Kakkar | Portfolio</title>
+    <title>Arnav Kakkar | Data Science × AI Portfolio</title>
+    <meta name="description" content="Portfolio of Arnav Kakkar — Data Science and AI Engineer building intelligent systems from data to deployment. Specializing in RAG architectures, machine learning models, and real-time anomaly detection.">
+    <meta name="theme-color" content="#060608">
 
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Arnav Kakkar | Data Science × AI Portfolio">
+    <meta property="og:description" content="I build intelligent systems from data to deployment. Explore flagship AI & ML systems including AIRA and RAG Teaching Assistant.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%238B5DFF'/><text x='50' y='68' font-size='56' font-weight='800' text-anchor='middle' fill='%23060608' font-family='sans-serif'>A</text></svg>">
+
+    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <a href="#home" class="logo">Arnav</a>
+    <!-- Ambient Glowing Background Layers -->
+    <div class="bg-ambient-layer" aria-hidden="true">
+        <div class="ambient-glow-1"></div>
+        <div class="ambient-glow-2"></div>
+        <div class="ambient-glow-3"></div>
+    </div>
+    <div class="bg-grid-overlay" aria-hidden="true"></div>
 
-    <nav>
-        <a href="#home" class="active">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#tools">Tools & Technologies</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    <!-- Reading / Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
 
-<!-- ================= HOME ================= -->
-<section class="home" id="home">
+    <!-- ================= FLOATING PILL NAVBAR ================= -->
+    <header class="header-wrapper">
+        <nav class="pill-navbar" aria-label="Main Navigation">
+            <a href="#home" class="nav-brand" aria-label="Arnav Kakkar - Home">
+                <span class="nav-brand-badge">A</span>
+                <span>Arnav</span>
+            </a>
 
-    <div class="profile-card">
-        <img src="profile.jpg" alt="Arnav Kakkar">
-        <h4>ARNAV KAKKAR</h4>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-cta">
+                <span>Let's Talk</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+        <ul>
+            <li><a href="#home" class="mobile-nav-link active"><span>Home</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="#about" class="mobile-nav-link"><span>About</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="#work" class="mobile-nav-link"><span>Work &amp; Projects</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="#skills" class="mobile-nav-link"><span>Skills &amp; Tech</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="#contact" class="mobile-nav-link"><span>Contact</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+        </ul>
     </div>
 
-    <div class="home-content">
-        <h1>Hi, It's <span>Arnav</span></h1>
-        <h3 class="typing-text">I'm a <span id="typed-text"></span></h3>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="home">
+        <canvas id="network-canvas" aria-hidden="true"></canvas>
 
-        <p>
-            I build data-driven systems that solve real-world problems.
-            Using Python and machine learning, I work on tasks like anomaly detection, recommendation systems, and intelligent search.
-            My projects include a RAG-based AI assistant and a real-time anomaly detection system, designed with a focus on accuracy, scalability, and performance.
-        </p>
+        <div class="container hero-grid">
+            <!-- Left Editorial Text Content -->
+            <div class="hero-content">
+                <div class="hero-status-pill">
+                    <span class="status-dot-pulse"></span>
+                    <span>DATA SCIENCE × AI</span>
+                </div>
 
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/arnav-kakkar-4ba734309/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/arnavkakkar/" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:arnavkakkar28.3@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-            <a href="resume.pdf" target="_blank"><i class="fa-solid fa-file-lines"></i></a>
-        </div>
+                <h1 class="hero-name">
+                    ARNAV <span class="gradient-text">KAKKAR</span>
+                </h1>
 
-        <a href="#contact" class="btn">Hire Me</a>
-    </div>
+                <div class="hero-role-wrapper">
+                    <span>I'm a </span>
+                    <span class="hero-role-typed" id="typed-text"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
 
-</section>
+                <p class="hero-tagline">
+                    “I build intelligent systems from data to deployment.”
+                </p>
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects">
-    <h2 class="section-title">Projects</h2>
+                <p class="hero-bio">
+                    I build data-driven systems that solve real-world problems. Using Python and machine learning, I work on tasks like anomaly detection, recommendation systems, and intelligent search. My projects include a RAG-based AI assistant and a real-time anomaly detection system, designed with a focus on accuracy, scalability, and performance.
+                </p>
 
-    <div class="projects-container">
-        
-        <!-- RAG AI Teaching Assistant -->
-        <div class="project-card">
-            <h3>RAG-Based AI Teaching Assistant</h3>
-            <p>
-                Built a retrieval-augmented generation system using LangChain and FAISS
-                to answer queries from 500+ documents with improved accuracy and response quality.
-            </p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                    <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-outline">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span>Resume</span>
+                    </a>
+                </div>
 
-            <div class="tech">
-                <span>Python</span>
-                <span>LangChain</span>
-                <span>FAISS</span>
-                <span>OpenAI API</span>
-                <span>NLP</span>
-            </div>
-        </div>
-
-        <!-- Real-Time Anomaly Detection -->
-        <div class="project-card">
-            <h3>Real-Time Anomaly Detection System</h3>
-            <p>
-                Developed a real-time anomaly detection pipeline using Isolation Forest
-                with live monitoring, feature engineering, and a Streamlit dashboard.
-            </p>
-
-            <div class="tech">
-                <span>Python</span>
-                <span>Scikit-learn</span>
-                <span>Streamlit</span>
-                <span>Time Series</span>
-            </div>
-        </div>
-
-        <!-- Credit Risk Modeling -->
-        <div class="project-card">
-            <h3>Credit Risk Prediction System</h3>
-            <p>
-                Machine learning model to classify applicants as good or bad credit risk using
-                multiple algorithms and deployed with a Streamlit app.
-            </p>
-
-            <div class="tech">
-                <span>Python</span>
-                <span>Pandas</span>
-                <span>Scikit-learn</span>
-                <span>Streamlit</span>
-            </div>
-        </div>
-
-        <!-- Fraud Detection -->
-        <div class="project-card">
-            <h3>Fraud Detection System</h3>
-            <p>
-                Built a machine learning pipeline to detect fraudulent financial transactions
-                using transaction patterns and deployed it as an interactive web app.
-            </p>
-
-            <div class="tech">
-                <span>Python</span>
-                <span>Pandas</span>
-                <span>NumPy</span>
-                <span>Scikit-learn</span>
-                <span>Streamlit</span>
-            </div>
-        </div>
-
-        <!-- Sales & Revenue Analysis -->
-        <div class="project-card">
-            <h3>Sales & Revenue Analysis</h3>
-            <p>
-                End-to-end business analysis uncovering revenue trends, customer insights,
-                and discount impact to drive strategic decision-making.
-            </p>
-
-            <div class="tech">
-                <span>Python</span>
-                <span>Pandas</span>
-                <span>Matplotlib</span>
-                <span>Data Analysis</span>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3>People Pages Recommendation System</h3>
-            <p>
-                Python-based recommendation system using similarity metrics and
-                user interaction data to suggest relevant pages.
-            </p>
-
-            <div class="tech">
-                <span>Python</span>
-                <span>Pandas</span>
-                <span>NumPy</span>
+                <!-- Verified External Socials -->
+                <div class="hero-socials">
+                    <a href="https://github.com/arnavkakkar/" target="_blank" rel="noopener" class="social-pill" aria-label="GitHub Profile">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/arnavkakkar" target="_blank" rel="noopener" class="social-pill" aria-label="LinkedIn Profile">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:arnavkakkar28.3@gmail.com" class="social-pill" aria-label="Direct Email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
             </div>
 
-            <div class="project-links">
-                <a href="https://github.com/arnavkakkar/people-pages-recommendation-python" target="_blank">
-                    View on GitHub →
+            <!-- Right Visual Column: Profile & Terminal -->
+            <div class="hero-visual-col">
+                <div class="profile-showcase">
+                    <div class="profile-glow-ring" aria-hidden="true"></div>
+                    <div class="profile-card-inner">
+                        <img src="profile.jpg" alt="Arnav Kakkar - Data Science &amp; AI Engineer" class="profile-img">
+                    </div>
+                </div>
+
+                <!-- Hero Technical Terminal Widget -->
+                <div class="hero-terminal-widget" aria-label="Terminal Environment Simulation">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="terminal-dot dot-red"></span>
+                            <span class="terminal-dot dot-yellow"></span>
+                            <span class="terminal-dot dot-green"></span>
+                        </div>
+                        <span class="terminal-title">arnav@portfolio ~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command">python build_model.py</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-step">Loading dataset…</span>
+                            <span class="terminal-check">✓</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-step">Training model…</span>
+                            <span class="terminal-check">✓</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-step">Deployment…</span>
+                            <span class="terminal-check">✓</span>
+                        </div>
+                        <div class="terminal-ready">System ready_</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-header-wrap">
+                <div class="section-label">01 // ABOUT</div>
+                <h2 class="section-title">ABOUT ME</h2>
+                <p class="about-intro-lead">
+                    I'm an engineering student focused on Data Science, Machine Learning, and AI. I enjoy building practical systems that turn data into useful insights, predictions, and intelligent applications.
+                </p>
+            </div>
+
+            <!-- Integrated "What I Build" Subsection -->
+            <div class="what-i-build-wrap">
+                <div class="what-i-build-heading">
+                    <span class="subheading-accent">WHAT I BUILD</span>
+                </div>
+
+                <div class="what-i-build-grid">
+                    <!-- 1. Data Science -->
+                    <div class="build-card reveal-on-scroll">
+                        <div class="build-card-header">
+                            <span class="build-card-num">01</span>
+                            <div class="build-card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        </div>
+                        <h3 class="build-card-title">Data Science</h3>
+                        <p class="build-card-desc">Data analysis, feature engineering, and insights.</p>
+                    </div>
+
+                    <!-- 2. Machine Learning -->
+                    <div class="build-card reveal-on-scroll delay-1">
+                        <div class="build-card-header">
+                            <span class="build-card-num">02</span>
+                            <div class="build-card-icon"><i class="fa-solid fa-microchip"></i></div>
+                        </div>
+                        <h3 class="build-card-title">Machine Learning</h3>
+                        <p class="build-card-desc">Predictive models, classification, anomaly detection.</p>
+                    </div>
+
+                    <!-- 3. Generative AI -->
+                    <div class="build-card reveal-on-scroll delay-2">
+                        <div class="build-card-header">
+                            <span class="build-card-num">03</span>
+                            <div class="build-card-icon"><i class="fa-solid fa-robot"></i></div>
+                        </div>
+                        <h3 class="build-card-title">Generative AI</h3>
+                        <p class="build-card-desc">RAG, embeddings, vector search, AI assistants.</p>
+                    </div>
+
+                    <!-- 4. Data Analytics -->
+                    <div class="build-card reveal-on-scroll delay-3">
+                        <div class="build-card-header">
+                            <span class="build-card-num">04</span>
+                            <div class="build-card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        </div>
+                        <h3 class="build-card-title">Data Analytics</h3>
+                        <p class="build-card-desc">Exploration, visualization and business insights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section class="projects-section" id="work">
+        <div class="container">
+            <div class="section-label">02 // WORK</div>
+            <h2 class="section-title">PROJECTS</h2>
+            <p class="section-subtitle">Practical applications spanning predictive machine learning, generative retrieval, and real-time detection systems.</p>
+
+            <!-- THREE HERO PROJECTS -->
+            <div class="flagship-showcase-container">
+
+                <!-- HERO PROJECT #1: AIRA -->
+                <article class="flagship-card reveal-on-scroll" id="project-aira">
+                    <div class="flagship-grid">
+                        <div class="flagship-info">
+                            <div class="flagship-meta-top">
+                                <span class="flagship-num">01 / PROJECT</span>
+                                <span class="flagship-badge">Healthcare AI</span>
+                            </div>
+
+                            <h3 class="flagship-title">AIRA</h3>
+                            <div class="flagship-subtitle">AI Respiratory Intelligence &amp; Risk Assessment</div>
+
+                            <p class="flagship-desc">
+                                AI-powered respiratory risk assessment platform that combines real-time AQI monitoring, 24-hour AQI forecasting using GRU neural networks, anomaly detection, and personalized health recommendations to help users take preventive action before hazardous conditions occur.
+                            </p>
+
+                            <ul class="flagship-highlights">
+                                <li><i class="fa-solid fa-check"></i> 24-hour AQI forecast powered by a GRU neural network</li>
+                                <li><i class="fa-solid fa-check"></i> Real-time environmental monitoring with anomaly alerts</li>
+                                <li><i class="fa-solid fa-check"></i> Personalized respiratory preventive health recommendations</li>
+                            </ul>
+
+                            <div class="flagship-tech-pills">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">GRU</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Chart.js</span>
+                            </div>
+
+                            <div class="flagship-actions">
+                                <a href="https://github.com/arnavkakkar/AIRA" target="_blank" rel="noopener" class="btn btn-primary">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>View on GitHub ↗</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- AIRA MacBook Window Preview -->
+                        <div class="macbook-window">
+                            <div class="macbook-titlebar">
+                                <div class="macbook-controls">
+                                    <span class="window-dot dot-red"></span>
+                                    <span class="window-dot dot-yellow"></span>
+                                    <span class="window-dot dot-green"></span>
+                                </div>
+                                <span class="macbook-title">aira — dashboard</span>
+                            </div>
+
+                            <div class="macbook-viewport">
+                                <!-- Image element with graceful fallback if image is not yet placed -->
+                                <img src="assets/projects/aira.png" 
+                                     alt="AIRA Respiratory Intelligence Dashboard" 
+                                     class="project-shot-img"
+                                     onerror="this.classList.add('img-hidden'); this.nextElementSibling.classList.remove('fallback-hidden');">
+                                
+                                <!-- High-fidelity visual fallback preview -->
+                                <div class="fallback-visual-container fallback-hidden">
+                                    <div class="aira-mock-dashboard">
+                                        <div class="aira-metrics-row">
+                                            <div class="aira-stat-box">
+                                                <div class="aira-stat-lbl">CURRENT AQI</div>
+                                                <div class="aira-stat-val val-warning">142 <small style="font-size:1.1rem;color:#9ca3af;">MODERATE</small></div>
+                                            </div>
+                                            <div class="aira-stat-box">
+                                                <div class="aira-stat-lbl">24H PREDICTED PEAK</div>
+                                                <div class="aira-stat-val val-accent">178 <small style="font-size:1.1rem;color:#9ca3af;">UNHEALTHY</small></div>
+                                            </div>
+                                            <div class="aira-stat-box">
+                                                <div class="aira-stat-lbl">ANOMALY STATUS</div>
+                                                <div class="aira-stat-val val-good">NORMAL <small style="font-size:1.1rem;color:#9ca3af;">GRU OPT</small></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="aira-chart-area">
+                                            <div class="chart-header">
+                                                <span><i class="fa-solid fa-chart-line accent"></i> 24-Hour GRU Predictive Trajectory</span>
+                                                <span class="mono" style="color:var(--accent-light);">RMSE: 4.12</span>
+                                            </div>
+                                            <svg class="aira-svg-chart" viewBox="0 0 460 160" xmlns="http://www.w3.org/2000/svg">
+                                                <defs>
+                                                    <linearGradient id="aira-grad" x1="0" y1="0" x2="0" y2="1">
+                                                        <stop offset="0%" stop-color="#8B5DFF" stop-opacity="0.5"/>
+                                                        <stop offset="100%" stop-color="#8B5DFF" stop-opacity="0.0"/>
+                                                    </linearGradient>
+                                                </defs>
+                                                <!-- Grid lines -->
+                                                <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+                                                    <line x1="20" y1="30" x2="440" y2="30"/>
+                                                    <line x1="20" y1="70" x2="440" y2="70"/>
+                                                    <line x1="20" y1="110" x2="440" y2="110"/>
+                                                    <line x1="20" y1="145" x2="440" y2="145"/>
+                                                </g>
+                                                <!-- Historical Curve -->
+                                                <path d="M 20 120 Q 80 130 140 100 T 240 85" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                                                <!-- Predicted 24h Area & Curve -->
+                                                <path d="M 240 85 Q 290 60 340 45 T 440 60 L 440 145 L 240 145 Z" fill="url(#aira-grad)"/>
+                                                <path d="M 240 85 Q 290 60 340 45 T 440 60" fill="none" stroke="#8B5DFF" stroke-width="3" stroke-dasharray="6,4" stroke-linecap="round"/>
+                                                <!-- Transition point -->
+                                                <circle cx="240" cy="85" r="5" fill="#8B5DFF" stroke="#ffffff" stroke-width="2"/>
+                                                <text x="230" y="70" fill="#a1a1aa" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="end">Now (T0)</text>
+                                                <text x="250" y="70" fill="#8B5DFF" font-family="'JetBrains Mono', monospace" font-size="10">GRU Forecast (+24h)</text>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- HERO PROJECT #2: RAG AI TEACHING ASSISTANT -->
+                <article class="flagship-card reveal-on-scroll delay-1" id="project-rag">
+                    <div class="flagship-grid reverse-desktop">
+                        <!-- RAG MacBook Window Preview -->
+                        <div class="macbook-window">
+                            <div class="macbook-titlebar">
+                                <div class="macbook-controls">
+                                    <span class="window-dot dot-red"></span>
+                                    <span class="window-dot dot-yellow"></span>
+                                    <span class="window-dot dot-green"></span>
+                                </div>
+                                <span class="macbook-title">rag-assistant — semantic-search</span>
+                            </div>
+
+                            <div class="macbook-viewport">
+                                <!-- Image element with graceful fallback if image is not yet placed -->
+                                <img src="assets/projects/rag.png" 
+                                     alt="RAG-Based AI Teaching Assistant Interface" 
+                                     class="project-shot-img"
+                                     onerror="this.classList.add('img-hidden'); this.nextElementSibling.classList.remove('fallback-hidden');">
+                                
+                                <!-- High-fidelity visual fallback preview -->
+                                <div class="fallback-visual-container fallback-hidden">
+                                    <div class="rag-mock-interface">
+                                        <div class="rag-flow-steps">
+                                            <div class="rag-flow-step">
+                                                <div class="step-num">01 / DOCS</div>
+                                                <div class="step-name">500+ Chunks</div>
+                                            </div>
+                                            <div class="rag-flow-step">
+                                                <div class="step-num">02 / EMBED</div>
+                                                <div class="step-name">OpenAI API</div>
+                                            </div>
+                                            <div class="rag-flow-step">
+                                                <div class="step-num">03 / INDEX</div>
+                                                <div class="step-name">FAISS Vector</div>
+                                            </div>
+                                            <div class="rag-flow-step">
+                                                <div class="step-num">04 / CHAIN</div>
+                                                <div class="step-name">LangChain</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="rag-query-box">
+                                            <div class="query-user">
+                                                <i class="fa-solid fa-terminal"></i>
+                                                <span>Query: "Explain gradient clipping implementation in GRU models"</span>
+                                            </div>
+                                            <div class="retrieval-pill">
+                                                <i class="fa-solid fa-database"></i> FAISS Similarity Score: 0.94 &bull; 4 Context Chunks Retrieved
+                                            </div>
+                                            <div class="query-response">
+                                                Synthesized from lecture documents &amp; lab guides: Gradient clipping bounds gradients during backpropagation through time (BPTT), preventing exploding gradients in recurrent networks...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Text Details -->
+                        <div class="flagship-info">
+                            <div class="flagship-meta-top">
+                                <span class="flagship-num">02 / PROJECT</span>
+                                <span class="flagship-badge">Generative AI</span>
+                            </div>
+
+                            <h3 class="flagship-title">RAG-Based AI Teaching Assistant</h3>
+                            <div class="flagship-subtitle">Generative AI &amp; Semantic Vector Retrieval System</div>
+
+                            <p class="flagship-desc">
+                                Built a retrieval-augmented generation system using LangChain and FAISS to answer queries from 500+ documents with improved accuracy and response quality.
+                            </p>
+
+                            <ul class="flagship-highlights">
+                                <li><i class="fa-solid fa-check"></i> Fast semantic vector search indexing over 500+ reference documents</li>
+                                <li><i class="fa-solid fa-check"></i> High-relevance context retrieval with FAISS and LangChain pipelines</li>
+                                <li><i class="fa-solid fa-check"></i> Accurate answer generation with hallucination mitigation and citations</li>
+                            </ul>
+
+                            <div class="flagship-tech-pills">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">LangChain</span>
+                                <span class="tech-tag">FAISS</span>
+                                <span class="tech-tag">OpenAI API</span>
+                                <span class="tech-tag">NLP</span>
+                            </div>
+
+                            <div class="flagship-actions">
+                                <a href="https://github.com/arnavkakkar/RAG-based-AI-teaching-assistant" target="_blank" rel="noopener" class="btn btn-primary">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>View on GitHub ↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- HERO PROJECT #3: REAL-TIME ANOMALY DETECTION SYSTEM -->
+                <article class="flagship-card reveal-on-scroll delay-2" id="project-anomaly">
+                    <div class="flagship-grid">
+                        <div class="flagship-info">
+                            <div class="flagship-meta-top">
+                                <span class="flagship-num">03 / PROJECT</span>
+                                <span class="flagship-badge">Machine Learning</span>
+                            </div>
+
+                            <h3 class="flagship-title">Real-Time Anomaly Detection System</h3>
+                            <div class="flagship-subtitle">Streaming Time-Series &amp; Outlier Identification</div>
+
+                            <p class="flagship-desc">
+                                Developed a real-time anomaly detection pipeline using Isolation Forest with live monitoring, feature engineering, and a Streamlit dashboard.
+                            </p>
+
+                            <ul class="flagship-highlights">
+                                <li><i class="fa-solid fa-check"></i> Real-time anomaly detection pipeline using Isolation Forest algorithms</li>
+                                <li><i class="fa-solid fa-check"></i> Live time-series streaming monitor with dynamic outlier boundary alerts</li>
+                                <li><i class="fa-solid fa-check"></i> Interactive Streamlit dashboard for parameter tuning and metric inspection</li>
+                            </ul>
+
+                            <div class="flagship-tech-pills">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">Time Series</span>
+                            </div>
+
+                            <div class="flagship-actions">
+                                <a href="https://github.com/arnavkakkar/Real-Time-Anomaly-Detection" target="_blank" rel="noopener" class="btn btn-primary">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>View on GitHub ↗</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Anomaly Detection MacBook Window Preview -->
+                        <div class="macbook-window">
+                            <div class="macbook-titlebar">
+                                <div class="macbook-controls">
+                                    <span class="window-dot dot-red"></span>
+                                    <span class="window-dot dot-yellow"></span>
+                                    <span class="window-dot dot-green"></span>
+                                </div>
+                                <span class="macbook-title">anomaly-detector — real-time-telemetry</span>
+                            </div>
+
+                            <div class="macbook-viewport">
+                                <!-- Image element with graceful fallback if image is not yet placed -->
+                                <img src="assets/projects/anomaly.png" 
+                                     alt="Real-Time Anomaly Detection Dashboard" 
+                                     class="project-shot-img"
+                                     onerror="this.classList.add('img-hidden'); this.nextElementSibling.classList.remove('fallback-hidden');">
+                                
+                                <!-- High-fidelity visual fallback preview -->
+                                <div class="fallback-visual-container fallback-hidden">
+                                    <div class="anomaly-mock-dashboard">
+                                        <div class="anomaly-metrics-row">
+                                            <div class="anomaly-stat-box">
+                                                <div class="anomaly-stat-lbl">STREAM STATUS</div>
+                                                <div class="anomaly-stat-val val-good">LIVE <small style="font-size:1.1rem;color:#9ca3af;">120ms</small></div>
+                                            </div>
+                                            <div class="anomaly-stat-box">
+                                                <div class="anomaly-stat-lbl">ISOLATION FOREST</div>
+                                                <div class="anomaly-stat-val val-accent">ACTIVE <small style="font-size:1.1rem;color:#9ca3af;">n=100</small></div>
+                                            </div>
+                                            <div class="anomaly-stat-box">
+                                                <div class="anomaly-stat-lbl">DETECTED OUTLIERS</div>
+                                                <div class="anomaly-stat-val val-warning">2 SPIKES <small style="font-size:1.1rem;color:#ef4444;">ALERT</small></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="anomaly-chart-area">
+                                            <div class="chart-header">
+                                                <span><i class="fa-solid fa-wave-square accent"></i> Live Telemetry &bull; Isolation Forest Boundary</span>
+                                                <span class="mono" style="color:#ef4444;"><i class="fa-solid fa-triangle-exclamation"></i> Outlier Alert</span>
+                                            </div>
+                                            <svg class="anomaly-svg-chart" viewBox="0 0 460 160" xmlns="http://www.w3.org/2000/svg">
+                                                <defs>
+                                                    <linearGradient id="anomaly-grad" x1="0" y1="0" x2="0" y2="1">
+                                                        <stop offset="0%" stop-color="#ef4444" stop-opacity="0.25"/>
+                                                        <stop offset="100%" stop-color="#8B5DFF" stop-opacity="0.0"/>
+                                                    </linearGradient>
+                                                </defs>
+                                                <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+                                                    <line x1="20" y1="30" x2="440" y2="30"/>
+                                                    <line x1="20" y1="70" x2="440" y2="70"/>
+                                                    <line x1="20" y1="110" x2="440" y2="110"/>
+                                                    <line x1="20" y1="145" x2="440" y2="145"/>
+                                                </g>
+                                                <line x1="20" y1="48" x2="440" y2="48" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.75"/>
+                                                <text x="435" y="42" fill="#ef4444" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="end">Threshold 0.82</text>
+                                                <path d="M 20 100 Q 50 110 80 95 T 140 105 T 190 92 L 210 28 L 225 105 T 280 95 T 330 22 L 345 100 T 400 95 T 440 90" fill="none" stroke="#8B5DFF" stroke-width="2.5" stroke-linecap="round"/>
+                                                <circle cx="210" cy="28" r="6" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+                                                <circle cx="330" cy="22" r="6" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+                                                <text x="210" y="16" fill="#ef4444" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle" font-weight="bold">Outlier #1</text>
+                                                <text x="330" y="12" fill="#ef4444" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle" font-weight="bold">Outlier #2</text>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- ================= MORE PROJECTS TOGGLE ================= -->
+            <div class="more-projects-trigger-wrap">
+                <button class="btn btn-outline" id="toggle-more-projects" aria-expanded="false" aria-controls="more-projects-collapse">
+                    <span id="more-projects-btn-text">MORE PROJECTS</span>
+                    <i class="fa-solid fa-arrow-right" id="more-projects-btn-icon"></i>
+                </button>
+            </div>
+
+            <!-- ================= COLLAPSIBLE MORE PROJECTS ================= -->
+            <div class="more-projects-collapse" id="more-projects-collapse">
+                <div class="compact-projects-grid">
+
+                    <!-- 1. Credit Risk Prediction System -->
+                    <article class="compact-project-card reveal-on-scroll">
+                        <div class="compact-card-header">
+                            <h4 class="compact-project-title">Credit Risk Prediction System</h4>
+                        </div>
+                        <p class="compact-project-desc">
+                            Machine learning model to classify applicants as good or bad credit risk using multiple algorithms and deployed with a Streamlit app.
+                        </p>
+                        <div class="compact-tech-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Pandas</span>
+                            <span class="tech-pill">Scikit-learn</span>
+                            <span class="tech-pill">Streamlit</span>
+                        </div>
+                        <div class="compact-card-footer">
+                            <a href="https://github.com/arnavkakkar/Credit-Risk-Management" target="_blank" rel="noopener" class="compact-github-link">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub ↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 2. Fraud Detection System -->
+                    <article class="compact-project-card reveal-on-scroll delay-1">
+                        <div class="compact-card-header">
+                            <h4 class="compact-project-title">Fraud Detection System</h4>
+                        </div>
+                        <p class="compact-project-desc">
+                            Built a machine learning pipeline to detect fraudulent financial transactions using transaction patterns and deployed it as an interactive web app.
+                        </p>
+                        <div class="compact-tech-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Pandas</span>
+                            <span class="tech-pill">NumPy</span>
+                            <span class="tech-pill">Scikit-learn</span>
+                            <span class="tech-pill">Streamlit</span>
+                        </div>
+                        <div class="compact-card-footer">
+                            <a href="https://github.com/arnavkakkar/Fraud-Detection" target="_blank" rel="noopener" class="compact-github-link">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub ↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 3. Sales & Revenue Analysis -->
+                    <article class="compact-project-card reveal-on-scroll delay-2">
+                        <div class="compact-card-header">
+                            <h4 class="compact-project-title">Sales &amp; Revenue Analysis</h4>
+                        </div>
+                        <p class="compact-project-desc">
+                            End-to-end business analysis uncovering revenue trends, customer insights, and discount impact to drive strategic decision-making.
+                        </p>
+                        <div class="compact-tech-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Pandas</span>
+                            <span class="tech-pill">Matplotlib</span>
+                            <span class="tech-pill">Data Analysis</span>
+                        </div>
+                        <div class="compact-card-footer">
+                            <a href="https://github.com/arnavkakkar/Sales-Revenue-Analysis" target="_blank" rel="noopener" class="compact-github-link">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub ↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 4. People Pages Recommendation System -->
+                    <article class="compact-project-card reveal-on-scroll">
+                        <div class="compact-card-header">
+                            <h4 class="compact-project-title">People Pages Recommendation System</h4>
+                        </div>
+                        <p class="compact-project-desc">
+                            Python-based recommendation system using similarity metrics and user interaction data to suggest relevant pages.
+                        </p>
+                        <div class="compact-tech-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Pandas</span>
+                            <span class="tech-pill">NumPy</span>
+                        </div>
+                        <div class="compact-card-footer">
+                            <a href="https://github.com/arnavkakkar/people-pages-recommendation-python" target="_blank" rel="noopener" class="compact-github-link">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub ↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 5. Instagram Data Analysis -->
+                    <article class="compact-project-card reveal-on-scroll delay-1">
+                        <div class="compact-card-header">
+                            <h4 class="compact-project-title">Instagram Data Analysis</h4>
+                        </div>
+                        <p class="compact-project-desc">
+                            Exploratory data analysis on Instagram datasets to extract engagement patterns and behavioral insights.
+                        </p>
+                        <div class="compact-tech-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Pandas</span>
+                            <span class="tech-pill">Matplotlib</span>
+                            <span class="tech-pill">Seaborn</span>
+                        </div>
+                        <div class="compact-card-footer">
+                            <a href="https://github.com/arnavkakkar/instagram-data-analysis" target="_blank" rel="noopener" class="compact-github-link">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub ↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 6. Jarvis Voice Assistant -->
+                    <article class="compact-project-card reveal-on-scroll delay-2">
+                        <div class="compact-card-header">
+                            <h4 class="compact-project-title">Jarvis Voice Assistant</h4>
+                        </div>
+                        <p class="compact-project-desc">
+                            An interactive voice assistant utilizing speech recognition and automated task execution for system control.
+                        </p>
+                        <div class="compact-tech-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Speech Recognition</span>
+                            <span class="tech-pill">Automation</span>
+                        </div>
+                        <div class="compact-card-footer">
+                            <a href="https://github.com/arnavkakkar/jarvis-voice-assistant" target="_blank" rel="noopener" class="compact-github-link">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub ↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 7. Secure Cloud Vault -->
+                    <article class="compact-project-card reveal-on-scroll">
+                        <div class="compact-card-header">
+                            <h4 class="compact-project-title">Secure Cloud Vault</h4>
+                        </div>
+                        <p class="compact-project-desc">
+                            Secure cloud storage and file management utility implementing authentication and encryption protocols.
+                        </p>
+                        <div class="compact-tech-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Cloud Storage</span>
+                            <span class="tech-pill">Cryptography</span>
+                        </div>
+                        <div class="compact-card-footer">
+                            <a href="https://github.com/arnavkakkar/secure-cloud-vault" target="_blank" rel="noopener" class="compact-github-link">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub ↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 8. SignVox -->
+                    <article class="compact-project-card reveal-on-scroll delay-1">
+                        <div class="compact-card-header">
+                            <h4 class="compact-project-title">SignVox</h4>
+                        </div>
+                        <p class="compact-project-desc">
+                            Computer vision and gesture-to-speech assistive application bridging communication gaps through real-time sign detection.
+                        </p>
+                        <div class="compact-tech-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">OpenCV</span>
+                            <span class="tech-pill">Computer Vision</span>
+                            <span class="tech-pill">Deep Learning</span>
+                        </div>
+                        <div class="compact-card-footer">
+                            <a href="https://github.com/arnavkakkar/SignVox" target="_blank" rel="noopener" class="compact-github-link">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub ↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 9. Logic Looper -->
+                    <article class="compact-project-card reveal-on-scroll delay-2">
+                        <div class="compact-card-header">
+                            <h4 class="compact-project-title">Logic Looper</h4>
+                        </div>
+                        <p class="compact-project-desc">
+                            Algorithmic puzzle and logical reasoning project focusing on computational logic and structured problem solving.
+                        </p>
+                        <div class="compact-tech-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Algorithms</span>
+                            <span class="tech-pill">Logic</span>
+                        </div>
+                        <div class="compact-card-footer">
+                            <a href="https://github.com/arnavkakkar/Logic-Looper" target="_blank" rel="noopener" class="compact-github-link">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub ↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS & TECH STACK ================= -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-header-center">
+                <div class="section-label">03 // TOOLKIT</div>
+                <h2 class="section-title">Tools &amp; Technologies</h2>
+                <p class="section-subtitle">Categorized technologies utilized in practical data analysis, machine learning modeling, and full-stack AI deployment.</p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="skills-filter-nav" role="tablist" aria-label="Technology filters">
+                <button class="skill-category-tab active" data-skill-filter="all">ALL</button>
+                <button class="skill-category-tab" data-skill-filter="data">DATA</button>
+                <button class="skill-category-tab" data-skill-filter="ml">MACHINE LEARNING</button>
+                <button class="skill-category-tab" data-skill-filter="ai">AI</button>
+                <button class="skill-category-tab" data-skill-filter="applications">APPLICATIONS</button>
+            </div>
+
+            <div class="skills-grouped-grid">
+                <!-- DATA -->
+                <div class="skill-card" data-domain="data">
+                    <div class="skill-icon-box"><i class="fa-brands fa-python"></i></div>
+                    <div class="skill-details">
+                        <h4>Python</h4>
+                        <span class="skill-category-label">Data &bull; Core</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-domain="data">
+                    <div class="skill-icon-box"><i class="fa-solid fa-table"></i></div>
+                    <div class="skill-details">
+                        <h4>Pandas</h4>
+                        <span class="skill-category-label">Data Manipulation</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-domain="data">
+                    <div class="skill-icon-box"><i class="fa-solid fa-calculator"></i></div>
+                    <div class="skill-details">
+                        <h4>NumPy</h4>
+                        <span class="skill-category-label">Numerical Computing</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-domain="data">
+                    <div class="skill-icon-box"><i class="fa-solid fa-database"></i></div>
+                    <div class="skill-details">
+                        <h4>SQL</h4>
+                        <span class="skill-category-label">Querying &amp; Schemas</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-domain="data">
+                    <div class="skill-icon-box"><i class="fa-solid fa-book-bookmark"></i></div>
+                    <div class="skill-details">
+                        <h4>Jupyter Notebook</h4>
+                        <span class="skill-category-label">Interactive Research</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-domain="data">
+                    <div class="skill-icon-box"><i class="fa-solid fa-chart-column"></i></div>
+                    <div class="skill-details">
+                        <h4>Matplotlib</h4>
+                        <span class="skill-category-label">Visualization</span>
+                    </div>
+                </div>
+
+                <!-- MACHINE LEARNING -->
+                <div class="skill-card" data-domain="ml">
+                    <div class="skill-icon-box"><i class="fa-solid fa-brain"></i></div>
+                    <div class="skill-details">
+                        <h4>Scikit-learn</h4>
+                        <span class="skill-category-label">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-domain="ml">
+                    <div class="skill-icon-box"><i class="fa-solid fa-wave-square"></i></div>
+                    <div class="skill-details">
+                        <h4>Time Series</h4>
+                        <span class="skill-category-label">Forecasting &amp; Models</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-domain="ml">
+                    <div class="skill-icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                    <div class="skill-details">
+                        <h4>GRU / Neural Networks</h4>
+                        <span class="skill-category-label">Deep Learning</span>
+                    </div>
+                </div>
+
+                <!-- AI -->
+                <div class="skill-card" data-domain="ai">
+                    <div class="skill-icon-box"><i class="fa-solid fa-robot"></i></div>
+                    <div class="skill-details">
+                        <h4>LangChain</h4>
+                        <span class="skill-category-label">LLM Pipelines</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-domain="ai">
+                    <div class="skill-icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="skill-details">
+                        <h4>FAISS</h4>
+                        <span class="skill-category-label">Vector Search</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-domain="ai">
+                    <div class="skill-icon-box"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="skill-details">
+                        <h4>OpenAI API</h4>
+                        <span class="skill-category-label">AI Integration</span>
+                    </div>
+                </div>
+
+                <!-- APPLICATIONS -->
+                <div class="skill-card" data-domain="applications">
+                    <div class="skill-icon-box"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="skill-details">
+                        <h4>Streamlit</h4>
+                        <span class="skill-category-label">Interactive ML Apps</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-domain="applications">
+                    <div class="skill-icon-box"><i class="fa-solid fa-server"></i></div>
+                    <div class="skill-details">
+                        <h4>Flask</h4>
+                        <span class="skill-category-label">Web Backend &amp; APIs</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-domain="applications">
+                    <div class="skill-icon-box"><i class="fa-brands fa-js"></i></div>
+                    <div class="skill-details">
+                        <h4>JavaScript</h4>
+                        <span class="skill-category-label">Frontend Logic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section class="contact-section" id="contact">
+        <div class="container contact-layout">
+            <!-- Left Contact Info -->
+            <div class="contact-info-col">
+                <div class="section-label">04 // GET IN TOUCH</div>
+                <h2>
+                    LET'S BUILD <br>
+                    <span class="gradient-text">SOMETHING</span>
+                </h2>
+                <p class="contact-lead">
+                    Have a project, idea, or opportunity in Data Science, Machine Learning, or AI systems? Reach out directly or send a message.
+                </p>
+
+                <div class="contact-channels">
+                    <a href="mailto:arnavkakkar28.3@gmail.com" class="channel-card">
+                        <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <div class="channel-label">Direct Email</div>
+                            <div class="channel-val">arnavkakkar28.3@gmail.com</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/arnavkakkar/" target="_blank" rel="noopener" class="channel-card">
+                        <div class="channel-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div>
+                            <div class="channel-label">LinkedIn</div>
+                            <div class="channel-val">arnavkakkar</div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/arnavkakkar/" target="_blank" rel="noopener" class="channel-card">
+                        <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+                        <div>
+                            <div class="channel-label">GitHub</div>
+                            <div class="channel-val">github.com/arnavkakkar</div>
+                        </div>
+                    </a>
+
+                    <div class="channel-card" style="cursor:default;">
+                        <div class="channel-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <div class="channel-label">Location</div>
+                            <div class="channel-val">Karnal, Haryana, India</div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="mailto:arnavkakkar28.3@gmail.com" class="btn btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Email Me Directly</span>
+                </a>
+            </div>
+
+            <!-- Right Contact Form -->
+            <div class="contact-form-card">
+                <h3>Send a Message</h3>
+                <p>Fill out the form below or connect via email.</p>
+
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Portfolio Message from arnavkakkar.github.io">
+                    <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <div class="form-group">
+                        <label for="form-name">Name *</label>
+                        <input type="text" id="form-name" name="name" class="form-control" required placeholder="Your full name" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-email">Email *</label>
+                        <input type="email" id="form-email" name="email" class="form-control" required placeholder="you@example.com" autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-phone">Phone (Optional)</label>
+                        <input type="tel" id="form-phone" name="phone" class="form-control" placeholder="+91 ..." autocomplete="tel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-message">Message *</label>
+                        <textarea id="form-message" name="message" class="form-control" rows="4" required placeholder="Details about your inquiry, problem statement, or opportunity..."></textarea>
+                    </div>
+
+                    <button type="submit" id="form-submit-btn" class="btn btn-primary" style="width:100%;">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Send Message</span>
+                    </button>
+
+                    <div class="form-status-msg" id="form-status-msg" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Arnav Kakkar</h3>
+                    <p>Data Science × AI Engineer</p>
+                </div>
+
+                <ul class="footer-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Arnav Kakkar. All rights reserved.</p>
+
+                <div class="footer-social-links">
+                    <a href="https://github.com/arnavkakkar/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arnav-kakkar-4ba734309/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:arnavkakkar28.3@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+
+                <a href="#home" class="back-to-top-btn">
+                    <span>Back to top</span>
+                    <i class="fa-solid fa-arrow-up"></i>
                 </a>
             </div>
         </div>
+    </footer>
 
-        <div class="project-card">
-            <h3>Instagram Data Analysis</h3>
-            <p>
-                Exploratory data analysis on Instagram datasets to extract
-                engagement patterns and behavioral insights.
-            </p>
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-            <div class="tech">
-                <span>Python</span>
-                <span>Pandas</span>
-                <span>Matplotlib</span>
-                <span>Seaborn</span>
-            </div>
-
-            <div class="project-links">
-                <a href="https://github.com/arnavkakkar/instagram-data-analysis" target="_blank">
-                    View on GitHub →
-                </a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ================= TOOLS & TECHNOLOGIES ================= -->
-<section id="tools">
-    <h2 class="section-title">Tools & Technologies</h2>
-
-    <div class="tools-container">
-
-        <div class="tool-card">
-    <i class="fa-brands fa-python"></i>
-    <h3>Python</h3>
-    <p>Core Programming</p>
-</div>
-
-<div class="tool-card">
-    <i class="fa-solid fa-book"></i>
-    <h3>Jupyter Notebook</h3>
-    <p>Interactive Analysis</p>
-</div>
-
-<div class="tool-card">
-    <i class="fa-solid fa-table"></i>
-    <h3>Pandas</h3>
-    <p>Data Manipulation</p>
-</div>
-
-<div class="tool-card">
-    <i class="fa-solid fa-calculator"></i>
-    <h3>NumPy</h3>
-    <p>Numerical Computing</p>
-</div>
-
-<div class="tool-card">
-    <i class="fa-solid fa-chart-line"></i>
-    <h3>Matplotlib</h3>
-    <p>Data Visualization</p>
-</div>
-
-<div class="tool-card">
-    <i class="fa-solid fa-database"></i>
-    <h3>SQL</h3>
-    <p>Data Querying</p>
-</div>
-
-<!-- NEW ADDITIONS -->
-
-<div class="tool-card">
-    <i class="fa-solid fa-brain"></i>
-    <h3>Scikit-learn</h3>
-    <p>Machine Learning</p>
-</div>
-
-<div class="tool-card">
-    <i class="fa-solid fa-bolt"></i>
-    <h3>Streamlit</h3>
-    <p>Web Apps & Deployment</p>
-</div>
-
-<div class="tool-card">
-    <i class="fa-solid fa-robot"></i>
-    <h3>LangChain</h3>
-    <p>LLM Applications</p>
-</div>
-
-<div class="tool-card">
-    <i class="fa-solid fa-layer-group"></i>
-    <h3>FAISS</h3>
-    <p>Vector Search</p>
-</div>
-
-<div class="tool-card">
-    <i class="fa-solid fa-microchip"></i>
-    <h3>OpenAI API</h3>
-    <p>AI Integration</p>
-</div>
-
-<div class="tool-card">
-    <i class="fa-solid fa-wave-square"></i>
-    <h3>Time Series</h3>
-    <p>Data Modeling</p>
-</div>
-
-    </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="contact-section">
-
-    <div class="contact-container">
-
-        <!-- LEFT SIDE -->
-        <div class="contact-left">
-            <h5 class="contact-subtitle"></h5>
-
-            <h2 class="contact-title">
-                Let's Talk for <br>
-                <span>Our</span><br>
-                <span>Next Projects</span>
-            </h2>
-
-            <p class="contact-desc">
-                Got an exciting project, a wild idea, or just want to brainstorm?
-                Let’s connect and create something incredible together.
-            </p>
-
-            <div class="contact-info">
-                <div class="info-row">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+91 9996438080</span>
-                </div>
-
-                <div class="info-row">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>arnavkakkar28.3@gmail.com</span>
-                </div>
-
-                <div class="info-row">
-                    <i class="fa-brands fa-github"></i>
-                    <span>arnavkakkar</span>
-                </div>
-
-                <div class="info-row">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Karnal, Haryana</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- RIGHT SIDE -->
-        <form class="contact-form">
-            <label>Name *</label>
-            <input type="text" required>
-
-            <label>Email *</label>
-            <input type="email" required>
-
-            <label>Phone</label>
-            <input type="tel">
-
-            <label>Message *</label>
-            <textarea rows="5" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-
-    </div>
-</section>
-
-<!-- ================= TYPEWRITER + NAV SCRIPT ================= -->
-<script>
-    let roleIndex = 0, charIndex = 0, deleting = false;
-    const roles = ["Data Scientist"];
-    const typedText = document.getElementById("typed-text");
-
-    function typeEffect() {
-        const current = roles[roleIndex];
-
-        if (!deleting) {
-            typedText.textContent = current.slice(0, ++charIndex);
-            if (charIndex === current.length) setTimeout(() => deleting = true, 1200);
-        } else {
-            typedText.textContent = current.slice(0, --charIndex);
-            if (charIndex === 0) {
-                deleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
+        /* ---------- Scroll Progress Bar ---------- */
+        const progressBar = document.getElementById("scroll-progress");
+        function updateScrollProgress() {
+            const scrollDistance = window.scrollY;
+            const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (documentHeight > 0) {
+                const percentage = (scrollDistance / documentHeight) * 100;
+                progressBar.style.width = percentage + "%";
             }
         }
-        setTimeout(typeEffect, deleting ? 70 : 110);
-    }
-    typeEffect();
+        window.addEventListener("scroll", updateScrollProgress, { passive: true });
 
-    const cursor = document.createElement("span");
-    cursor.className = "cursor";
-    cursor.textContent = "|";
-    typedText.parentElement.appendChild(cursor);
+        /* ---------- Floating Pill Navbar Active Link ScrollSpy ---------- */
+        const sections = document.querySelectorAll("section[id]");
+        const desktopNavLinks = document.querySelectorAll(".nav-links a");
+        const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll("nav a");
+        function updateActiveNav() {
+            let currentSectionId = "home";
+            const scrollY = window.scrollY;
+            sections.forEach(sec => {
+                const secTop = sec.offsetTop - 140;
+                const secHeight = sec.offsetHeight;
+                if (scrollY >= secTop && scrollY < secTop + secHeight) {
+                    currentSectionId = sec.getAttribute("id");
+                }
+            });
 
-    function setActiveLink() {
-        let current = "";
-        sections.forEach(section => {
-            if (scrollY >= section.offsetTop - 200) {
-                current = section.id;
+            desktopNavLinks.forEach(link => {
+                const href = link.getAttribute("href");
+                link.classList.toggle("active", href === `#${currentSectionId}`);
+            });
+
+            mobileNavLinks.forEach(link => {
+                const href = link.getAttribute("href");
+                link.classList.toggle("active", href === `#${currentSectionId}`);
+            });
+        }
+        window.addEventListener("scroll", updateActiveNav, { passive: true });
+        updateActiveNav();
+
+        /* ---------- Mobile Navigation Drawer ---------- */
+        const mobileToggleBtn = document.getElementById("mobile-menu-toggle");
+        const mobileDrawer = document.getElementById("mobile-nav-drawer");
+
+        function toggleMobileMenu() {
+            const isOpen = mobileDrawer.classList.toggle("open");
+            mobileToggleBtn.setAttribute("aria-expanded", isOpen);
+            const icon = mobileToggleBtn.querySelector("i");
+            if (isOpen) {
+                icon.className = "fa-solid fa-xmark";
+            } else {
+                icon.className = "fa-solid fa-bars";
+            }
+        }
+
+        mobileToggleBtn.addEventListener("click", toggleMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                if (mobileDrawer.classList.contains("open")) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        // Close mobile drawer on outside click
+        document.addEventListener("click", (e) => {
+            if (!mobileDrawer.contains(e.target) && !mobileToggleBtn.contains(e.target) && mobileDrawer.classList.contains("open")) {
+                toggleMobileMenu();
             }
         });
-        navLinks.forEach(link => {
-            link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
+
+        /* ---------- Improved Typewriter Effect ---------- */
+        const supportedRoles = [
+            "Data Scientist",
+            "Full Stack AI Engineer",
+            "AI/ML Engineer",
+            "Data Analyst"
+        ];
+        const typedTextEl = document.getElementById("typed-text");
+        let currentRoleIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+
+        function runTypewriter() {
+            const currentRole = supportedRoles[currentRoleIndex];
+            let delay = isDeleting ? 45 : 95;
+
+            if (!isDeleting) {
+                typedTextEl.textContent = currentRole.slice(0, ++currentCharIndex);
+                if (currentCharIndex === currentRole.length) {
+                    isDeleting = true;
+                    delay = 1800; // Pause when complete word
+                }
+            } else {
+                typedTextEl.textContent = currentRole.slice(0, --currentCharIndex);
+                if (currentCharIndex === 0) {
+                    isDeleting = false;
+                    currentRoleIndex = (currentRoleIndex + 1) % supportedRoles.length;
+                    delay = 350; // Pause before typing next word
+                }
+            }
+            setTimeout(runTypewriter, delay);
+        }
+
+        if (prefersReducedMotion) {
+            typedTextEl.textContent = supportedRoles[0];
+        } else {
+            runTypewriter();
+        }
+
+        /* ---------- Hero Subtle Constellation Canvas ---------- */
+        (function initConstellationCanvas() {
+            const canvas = document.getElementById("network-canvas");
+            if (!canvas) return;
+            const ctx = canvas.getContext("2d");
+            const heroSection = document.getElementById("home");
+            let width, height;
+            let particles = [];
+            let isAnimating = true;
+            let mousePos = { x: null, y: null };
+            const MAX_DISTANCE = 120;
+
+            function resizeCanvas() {
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                width = heroSection.clientWidth;
+                height = heroSection.clientHeight;
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                canvas.style.width = width + "px";
+                canvas.style.height = height + "px";
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+                const particleCount = Math.min(65, Math.floor((width * height) / 19000));
+                particles = Array.from({ length: particleCount }, () => ({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 0.4,
+                    vy: (Math.random() - 0.5) * 0.4,
+                    radius: Math.random() * 1.5 + 0.8
+                }));
+            }
+
+            function renderParticles() {
+                ctx.clearRect(0, 0, width, height);
+
+                for (let i = 0; i < particles.length; i++) {
+                    const p1 = particles[i];
+
+                    if (!prefersReducedMotion) {
+                        p1.x += p1.vx;
+                        p1.y += p1.vy;
+                        if (p1.x < 0 || p1.x > width) p1.vx *= -1;
+                        if (p1.y < 0 || p1.y > height) p1.vy *= -1;
+                    }
+
+                    ctx.beginPath();
+                    ctx.arc(p1.x, p1.y, p1.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = "rgba(139, 93, 255, 0.7)";
+                    ctx.fill();
+
+                    // Connect neighboring particles
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const p2 = particles[j];
+                        const dx = p1.x - p2.x;
+                        const dy = p1.y - p2.y;
+                        const dist = Math.hypot(dx, dy);
+
+                        if (dist < MAX_DISTANCE) {
+                            ctx.strokeStyle = `rgba(139, 93, 255, ${0.22 * (1 - dist / MAX_DISTANCE)})`;
+                            ctx.lineWidth = 1;
+                            ctx.beginPath();
+                            ctx.moveTo(p1.x, p1.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.stroke();
+                        }
+                    }
+
+                    // Mouse proximity connection
+                    if (mousePos.x !== null) {
+                        const mDist = Math.hypot(p1.x - mousePos.x, p1.y - mousePos.y);
+                        if (mDist < 140) {
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${0.28 * (1 - mDist / 140)})`;
+                            ctx.beginPath();
+                            ctx.moveTo(p1.x, p1.y);
+                            ctx.lineTo(mousePos.x, mousePos.y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                if (isAnimating && !prefersReducedMotion) {
+                    requestAnimationFrame(renderParticles);
+                }
+            }
+
+            heroSection.addEventListener("mousemove", (e) => {
+                const rect = heroSection.getBoundingClientRect();
+                mousePos.x = e.clientX - rect.left;
+                mousePos.y = e.clientY - rect.top;
+            });
+
+            heroSection.addEventListener("mouseleave", () => {
+                mousePos.x = null;
+                mousePos.y = null;
+            });
+
+            // Pause off-screen for battery efficiency
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries[0].isIntersecting;
+                if (visible && !isAnimating) {
+                    isAnimating = true;
+                    renderParticles();
+                }
+                isAnimating = visible;
+            });
+            observer.observe(heroSection);
+
+            window.addEventListener("resize", () => {
+                resizeCanvas();
+                if (prefersReducedMotion) renderParticles();
+            });
+
+            resizeCanvas();
+            renderParticles();
+        })();
+
+        /* ---------- More Projects Expand/Collapse Toggle ---------- */
+        const moreProjectsBtn = document.getElementById("toggle-more-projects");
+        const moreProjectsCollapse = document.getElementById("more-projects-collapse");
+        const moreProjectsBtnText = document.getElementById("more-projects-btn-text");
+        const moreProjectsBtnIcon = document.getElementById("more-projects-btn-icon");
+
+        if (moreProjectsBtn && moreProjectsCollapse) {
+            moreProjectsBtn.addEventListener("click", () => {
+                const isExpanded = moreProjectsCollapse.classList.toggle("expanded");
+                moreProjectsBtn.setAttribute("aria-expanded", isExpanded);
+
+                if (isExpanded) {
+                    moreProjectsBtnText.textContent = "SHOW LESS";
+                    moreProjectsBtnIcon.className = "fa-solid fa-arrow-up";
+                    // Trigger scroll-reveal on newly visible project cards
+                    moreProjectsCollapse.querySelectorAll(".reveal-on-scroll").forEach(el => {
+                        el.classList.add("revealed");
+                    });
+                } else {
+                    moreProjectsBtnText.textContent = "MORE PROJECTS";
+                    moreProjectsBtnIcon.className = "fa-solid fa-arrow-right";
+                    // Smoothly scroll user back up to the projects trigger button if deep down
+                    const triggerRect = moreProjectsBtn.getBoundingClientRect();
+                    if (triggerRect.top < 0) {
+                        const yOffset = -120;
+                        const y = moreProjectsBtn.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        window.scrollTo({ top: y, behavior: "smooth" });
+                    }
+                }
+            });
+        }
+
+        /* ---------- Skills Category Filtering ---------- */
+        const skillTabs = document.querySelectorAll(".skill-category-tab");
+        const skillCards = document.querySelectorAll(".skill-card");
+
+        skillTabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                skillTabs.forEach(t => t.classList.remove("active"));
+                tab.classList.add("active");
+
+                const domain = tab.getAttribute("data-skill-filter");
+                skillCards.forEach(card => {
+                    if (domain === "all" || card.getAttribute("data-domain") === domain) {
+                        card.classList.remove("dimmed");
+                    } else {
+                        card.classList.add("dimmed");
+                    }
+                });
+            });
         });
-    }
 
-    window.addEventListener("scroll", setActiveLink);
-</script>
+        /* ---------- Robust Image Fallback Handler ---------- */
+        document.querySelectorAll('.project-shot-img, .sub-card-img').forEach(img => {
+            function showFallback() {
+                img.classList.add('img-hidden');
+                if (img.nextElementSibling) {
+                    img.nextElementSibling.classList.remove('fallback-hidden');
+                }
+            }
+            img.addEventListener('error', showFallback);
+            if (img.complete && (img.naturalWidth === 0 || img.naturalHeight === 0)) {
+                showFallback();
+            }
+        });
 
+        /* ---------- IntersectionObserver Scroll Reveal ---------- */
+        (function initScrollReveal() {
+            const revealElements = document.querySelectorAll(".reveal-on-scroll");
+            if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+                revealElements.forEach(el => el.classList.add("revealed"));
+                return;
+            }
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("revealed");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                rootMargin: "150px 0px 50px 0px",
+                threshold: 0.01
+            });
+
+            revealElements.forEach(el => {
+                revealObserver.observe(el);
+                // If element is already in viewport
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight + 100) {
+                    el.classList.add("revealed");
+                }
+            });
+
+            // Safety timeout to ensure content is never stuck hidden
+            setTimeout(() => {
+                revealElements.forEach(el => el.classList.add("revealed"));
+            }, 800);
+        })();
+
+        /* ---------- Contact Form Handler ---------- */
+        const contactForm = document.getElementById("contact-form");
+        const formStatus = document.getElementById("form-status-msg");
+        const submitBtn = document.getElementById("form-submit-btn");
+
+        contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            formStatus.className = "form-status-msg";
+
+            if (contactForm.access_key.value === "YOUR_ACCESS_KEY_HERE") {
+                formStatus.innerHTML = "<i class='fa-solid fa-circle-info'></i> Note: Form is ready for your Web3Forms access key. To reach me immediately, click <strong>Email Me Directly</strong> above or write to <strong>arnavkakkar28.3@gmail.com</strong>.";
+                formStatus.classList.add("error");
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = "<i class='fa-solid fa-spinner fa-spin'></i> <span>Sending…</span>";
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: "POST",
+                    headers: { "Accept": "application/json" },
+                    body: new FormData(contactForm)
+                });
+                const result = await response.json();
+
+                if (result.success) {
+                    formStatus.textContent = "Thank you! Your message has been sent successfully.";
+                    formStatus.classList.add("success");
+                    contactForm.reset();
+                } else {
+                    throw new Error(result.message || "Failed to submit");
+                }
+            } catch (err) {
+                formStatus.innerHTML = "Unable to deliver through form service. Please email me directly at <a href='mailto:arnavkakkar28.3@gmail.com' style='color:var(--accent-light);text-decoration:underline;'>arnavkakkar28.3@gmail.com</a>.";
+                formStatus.classList.add("error");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = "<i class='fa-solid fa-paper-plane'></i> <span>Send Message</span>";
+            }
+        });
+    </script>
 </body>
-
 </html>
