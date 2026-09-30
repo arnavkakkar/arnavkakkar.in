@@ -10,7 +10,7 @@
     --bg-card: rgba(15, 15, 23, 0.72);
     --bg-card-hover: rgba(22, 22, 34, 0.88);
     --bg-pill: rgba(13, 13, 18, 0.78);
-    
+
     --accent: #8B5DFF;
     --accent-light: #A78BFA;
     --accent-dark: #6D28D9;
@@ -53,7 +53,9 @@
 /* ==========================================================================
    RESET & BASE STYLES
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -121,7 +123,7 @@ body {
 .bg-grid-overlay {
     position: fixed;
     inset: 0;
-    background-image: 
+    background-image:
         linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
     background-size: 48px 48px;
@@ -145,7 +147,12 @@ body {
 }
 
 /* Typography Helpers */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     color: var(--text-primary);
     font-weight: 700;
@@ -386,7 +393,7 @@ section {
     border-radius: var(--radius-xl);
     padding: 2.4rem;
     z-index: 999;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
@@ -560,9 +567,20 @@ section {
 }
 
 @keyframes pulseGlow {
-    0% { transform: scale(1); opacity: 0.8; }
-    70% { transform: scale(2.4); opacity: 0; }
-    100% { transform: scale(2.4); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    70% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
 }
 
 .hero-name {
@@ -596,8 +614,15 @@ section {
 }
 
 @keyframes cursorFade {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 .hero-tagline {
@@ -765,9 +790,17 @@ section {
     border-radius: 50%;
 }
 
-.dot-red { background: #ef4444; }
-.dot-yellow { background: #f59e0b; }
-.dot-green { background: #10b981; }
+.dot-red {
+    background: #ef4444;
+}
+
+.dot-yellow {
+    background: #f59e0b;
+}
+
+.dot-green {
+    background: #10b981;
+}
 
 .terminal-title {
     color: var(--text-muted);
@@ -1127,9 +1160,17 @@ section {
     display: inline-block;
 }
 
-.dot-red { background: #ef4444; }
-.dot-yellow { background: #f59e0b; }
-.dot-green { background: #10b981; }
+.dot-red {
+    background: #ef4444;
+}
+
+.dot-yellow {
+    background: #f59e0b;
+}
+
+.dot-green {
+    background: #10b981;
+}
 
 .macbook-title {
     position: absolute;
@@ -1217,9 +1258,17 @@ section {
     font-weight: 700;
 }
 
-.val-warning { color: #f59e0b; }
-.val-good { color: var(--accent-emerald); }
-.val-accent { color: var(--accent-light); }
+.val-warning {
+    color: #f59e0b;
+}
+
+.val-good {
+    color: var(--accent-emerald);
+}
+
+.val-accent {
+    color: var(--accent-light);
+}
 
 .aira-chart-area {
     background: rgba(0, 0, 0, 0.4);
@@ -1779,8 +1828,13 @@ textarea.form-control {
     font-family: var(--font-mono);
 }
 
-.form-status-msg.success { color: var(--accent-emerald); }
-.form-status-msg.error { color: #f87171; }
+.form-status-msg.success {
+    color: var(--accent-emerald);
+}
+
+.form-status-msg.error {
+    color: #f87171;
+}
 
 .hp-field {
     display: none;
@@ -1892,10 +1946,21 @@ textarea.form-control {
 }
 
 /* Stagger delay classes */
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+.delay-4 {
+    transition-delay: 0.4s;
+}
 
 /* ==========================================================================
    RESPONSIVE DESIGN BREAKPOINTS
@@ -2132,7 +2197,9 @@ textarea.form-control {
         scroll-behavior: auto;
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
